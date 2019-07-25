@@ -5,11 +5,12 @@ import thunk from "redux-thunk";
 import { createStore, applyMiddleware } from "redux";
 
 import App from "./App";
+import { reducer } from "./store/reducers";
 
 import "./styles.scss";
 import "semantic-ui-css/semantic.min.css";
 
-const store = createStore(() => {}, applyMiddleware(thunk));
+const store = createStore(reducer, applyMiddleware(thunk));
 
 const rootElement = document.getElementById("root");
 

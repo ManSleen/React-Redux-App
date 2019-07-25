@@ -1,7 +1,8 @@
 import React from "react";
+import WeatherDashboard from "./components/WeatherDashboard";
 
 const App = () => {
-  return <h1>App-time baby!</h1>;
+  return <WeatherDashboard />;
 };
 
 export default App;

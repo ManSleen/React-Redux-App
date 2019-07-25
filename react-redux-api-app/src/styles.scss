@@ -122,3 +122,40 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+.weather-dashboard-container {
+  width: 100%;
+  .weather-dashboard-location-container {
+    background-color: rgb(69, 69, 197);
+  }
+  .weather-dashboard-location {
+    width: 75vw;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+    color: white;
+    .location {
+      margin: 20px;
+      font-size: 1.2rem;
+    }
+  }
+  .current-weather-details-container {
+    width: 100%;
+
+    background-color: rgb(235, 235, 235);
+    .current-weather-details {
+      width: 60vw;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      h6,
+      p {
+        display: inline-block;
+        margin: 10px 2px;
+      }
+    }
+  }
+}
