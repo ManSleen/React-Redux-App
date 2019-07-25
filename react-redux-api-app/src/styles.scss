@@ -143,7 +143,6 @@ table {
   }
   .current-weather-details-container {
     width: 100%;
-
     background-color: rgb(235, 235, 235);
     .current-weather-details {
       width: 60vw;
@@ -157,5 +156,18 @@ table {
         margin: 10px 2px;
       }
     }
+  }
+  .current-forecast-container {
+    width: 60vw;
+    margin: 40px auto;
+    text-align: center;
+    height: 30vh;
+    h1 {
+      font-size: 3.4rem;
+    }
+  }
+  .weekly-forecast-container {
+    width: 60vw;
+    margin: 30px auto;
   }
 }
