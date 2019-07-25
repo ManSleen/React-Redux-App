@@ -1,10 +1,13 @@
 import React from "react";
 
-const Location = () => {
+const Location = ({ weather }) => {
   return (
     <div className="weather-dashboard-location-container">
       <div className="weather-dashboard-location">
-        <div className="location current">Current Location</div>
+        <div className="location current">
+          <strong>Current Location: </strong>
+          {weather.timezone}
+        </div>
         <div className="location search">
           <input placeholder="Location Search" />
         </div>

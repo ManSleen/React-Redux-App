@@ -1,9 +1,11 @@
 import React from "react";
 
-const CurrentForecast = () => {
+const CurrentForecast = ({ weather }) => {
   return (
     <div className="current-forecast-container">
-      <h1>85&deg; Mostly Cloudy</h1>
+      <h1>
+        {weather.currently.temperature}&deg; {weather.currently.summary}
+      </h1>
     </div>
   );
 };
