@@ -139,14 +139,14 @@ table {
     color: white;
     .location {
       margin: 20px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       .current-location {
         font-weight: bolder;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin-right: 10px;
       }
       .weather-timezone {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
     .search {
@@ -175,13 +175,13 @@ table {
     width: 60vw;
     margin: 40px auto;
     text-align: center;
-    height: 150px;
+    height: 180px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
   }
   .weekly-forecast-container {
@@ -221,7 +221,7 @@ table {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   .high-low {
     font-weight: bolder;
   }
@@ -246,6 +246,6 @@ table {
   }
   .temp {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }

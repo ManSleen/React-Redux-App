@@ -20,11 +20,11 @@ const CurrentForecast = ({ weather }) => {
         <div className="high-low-container">
           <div className="low">
             <span className="high-low">Low: </span>
-            {weather.daily.data[0].temperatureLow}
+            {Math.round(weather.daily.data[0].temperatureLow)}&deg;
           </div>
           <div className="high">
             <span className="high-low">High: </span>
-            {weather.daily.data[0].temperatureHigh}
+            {Math.round(weather.daily.data[0].temperatureHigh)}&deg;
           </div>
         </div>
       </div>
