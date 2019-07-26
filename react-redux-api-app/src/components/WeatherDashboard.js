@@ -28,7 +28,7 @@ const WeatherDashboard = props => {
     return (
       <div className="weather-loader-spinner">
         <Loader type="Puff" color="rgb(69, 69, 197)" height="100" width="100" />
-        We're loading your weather, sit tight!
+        <h2>Please Allow Us to Use Your Location...</h2>
       </div>
     );
   }
