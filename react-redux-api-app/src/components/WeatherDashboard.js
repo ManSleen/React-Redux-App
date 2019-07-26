@@ -13,21 +13,21 @@ import { fetchWeather } from "../store/actions";
 const WeatherDashboard = props => {
   props.fetchWeather();
 
-  if (!props.weather) {
-    return (
-      <div className="weather-loader-spinner">
-        <Loader type="Puff" color="#00BFFF" height="100" width="100" />
-        We're loading your weather, sit tight!
-      </div>
-    );
-  } else {
+  if (props.weather && props.coords) {
     return (
       <div className="weather-dashboard-container">
         <Location weather={props.weather} />
         <CurrentWeatherDetails weather={props.weather} />
         <CurrentForecast weather={props.weather} />
-        <WeatherMap />
+        <WeatherMap coords={props.coords} />
         <WeeklyForecast />
+      </div>
+    );
+  } else {
+    return (
+      <div className="weather-loader-spinner">
+        <Loader type="Puff" color="#00BFFF" height="100" width="100" />
+        We're loading your weather, sit tight!
       </div>
     );
   }
@@ -38,7 +38,8 @@ const mapStateToProps = state => {
   return {
     error: state.error,
     isFetching: state.isFetching,
-    weather: state.weather
+    weather: state.weather,
+    coords: state.coords
   };
 };
 

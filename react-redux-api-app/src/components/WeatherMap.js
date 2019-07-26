@@ -1,34 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DarkskyMap from "react-darksky-map";
 
-const WeatherMap = () => {
-  const [longitude, setLongitude] = useState(() => {
-    return navigator.geolocation.getCurrentPosition(
-      position => position.coords.longitude
-    );
-  });
-  const [latitude, setLatitude] = useState(() => {
-    return navigator.geolocation.getCurrentPosition(
-      position => position.coords.latitude
-    );
-  });
-
-  //   useEffect(() => {
-
-  //   }, [longitude]);
-
-  //   function getCoords() {
-  //     navigator.geolocation.getCurrentPosition(position => {
-  //       setLongitude(position.coords.longitude);
-  //       setLatitude(position.coords.latitude);
-  //     });
-  //   }
-
+const WeatherMap = props => {
+  console.log(props);
   return (
     <div className="weather-map-container">
-      <DarkskyMap lat={latitude} lng={longitude} zoom={6} mapField="precip" />
-
-      {console.log(latitude)}
+      <DarkskyMap
+        lat={props.coords.lat}
+        lng={props.coords.long}
+        zoom={8}
+        mapField="precip"
+      />
     </div>
   );
 };

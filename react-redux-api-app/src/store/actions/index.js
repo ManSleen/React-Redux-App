@@ -6,6 +6,8 @@ export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
 
 export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 
+export const SET_COORDS = "SET_COORDS";
+
 export const fetchWeather = () => dispatch => {
   window.addEventListener("load", () => {
     let long, lat;
@@ -20,6 +22,7 @@ export const fetchWeather = () => dispatch => {
         const api = `${proxy}https://api.darksky.net/forecast/a28fc69c06cc216bcb966fb72aa9ba18/${lat},${long}`;
 
         dispatch({ type: FETCH_DATA_START });
+        dispatch({ type: SET_COORDS, payload: { lat, long } });
         axios
           .get(api)
           .then(res => {
