@@ -175,7 +175,7 @@ table {
     width: 60vw;
     margin: 40px auto;
     text-align: center;
-    height: 20vh;
+    height: 150px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -227,5 +227,25 @@ table {
   }
   .low {
     margin-right: 20px;
+  }
+}
+
+.hourly-data {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 30px auto;
+  width: 70vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hourly-weather-info {
+  .hour {
+    margin: 2px 15px;
+  }
+  .temp {
+    font-weight: bold;
+    font-size: 1.2rem;
   }
 }

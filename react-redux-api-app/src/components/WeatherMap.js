@@ -8,8 +8,9 @@ const WeatherMap = props => {
       <DarkskyMap
         lat={props.coords.lat}
         lng={props.coords.long}
-        zoom={8}
-        mapField="precip"
+        zoom={6}
+        height="800px"
+        mapField="temp"
       />
     </div>
   );

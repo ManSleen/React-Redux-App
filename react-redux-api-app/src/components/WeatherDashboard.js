@@ -7,6 +7,7 @@ import CurrentWeatherDetails from "./CurrentWeatherDetails";
 import CurrentForecast from "./CurrentForecast";
 import WeeklyForecast from "./WeeklyForecast";
 import WeatherMap from "./WeatherMap";
+import HourlyWeather from "./HourlyWeather";
 
 import { fetchWeather } from "../store/actions";
 
@@ -19,8 +20,8 @@ const WeatherDashboard = props => {
         <Location weather={props.weather} />
         <CurrentWeatherDetails weather={props.weather} />
         <CurrentForecast weather={props.weather} />
+        <HourlyWeather weather={props.weather} />
         <WeatherMap coords={props.coords} />
-        <WeeklyForecast />
       </div>
     );
   } else {
