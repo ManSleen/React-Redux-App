@@ -11,6 +11,7 @@ const WeatherMap = props => {
         zoom={6}
         height="800px"
         mapField="temp"
+        units="imperial"
       />
     </div>
   );
