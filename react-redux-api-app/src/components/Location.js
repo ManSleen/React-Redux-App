@@ -1,17 +1,20 @@
 import React from "react";
+import { Input, Button } from "semantic-ui-react";
 
 const Location = ({ weather }) => {
   return (
     <div className="weather-dashboard-location-container">
       <div className="weather-dashboard-location">
         <div className="location current">
-          <strong>Current Location: </strong>
-          {weather.timezone}
+          <span className="current-location">Current Location: </span>
+          <span className="weather-timezone">{weather.timezone}</span>
         </div>
         <div className="location search">
-          <input placeholder="Location Search" />
+          <Input size="mini" icon="search" placeholder="Search..." />
         </div>
-        <div className="location units">Convert to Metric</div>
+        <div className="location units">
+          <Button secondary>Convert to Metric</Button>
+        </div>
       </div>
     </div>
   );

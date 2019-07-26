@@ -26,7 +26,7 @@ const WeatherDashboard = props => {
   } else {
     return (
       <div className="weather-loader-spinner">
-        <Loader type="Puff" color="#00BFFF" height="100" width="100" />
+        <Loader type="Puff" color="rgb(69, 69, 197)" height="100" width="100" />
         We're loading your weather, sit tight!
       </div>
     );

@@ -12,10 +12,22 @@ const CurrentForecast = ({ weather }) => {
           autoplay={true}
         />
       </div>
-
-      <h1>
-        {weather.currently.temperature}&deg; {weather.currently.summary}
-      </h1>
+      <div className="weather-container">
+        <h1>
+          {Math.round(weather.currently.temperature)}&deg;{" "}
+          {weather.currently.summary}
+        </h1>
+        <div className="high-low-container">
+          <div className="low">
+            <span className="high-low">Low: </span>
+            {weather.daily.data[0].temperatureLow}
+          </div>
+          <div className="high">
+            <span className="high-low">High: </span>
+            {weather.daily.data[0].temperatureHigh}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
